@@ -33,6 +33,32 @@ let someNumber = 33
 
 let stringNumber = String(someNumber) //converted into String
 
-console.log(typeof stringNumber);
+// console.log(typeof stringNumber);
 
 
+
+// *************** OPERATIONS  *************************
+
+let value = 3
+let negValue = -value
+
+// console.log(negValue);
+
+// console.log(2+2);
+// console.log(2-2);
+// console.log(2*2);
+// console.log(2/2);
+// console.log(2**3);
+// console.log(2%3);
+
+// console.log("1" + 2);
+// console.log(1 + "2");
+// console.log( 1 + 1 + "2"); // if last is string first two consider as number
+// console.log( "1" + 1 + 2); // if start with string remain value consider as string
+
+
+let gameCounter = 2
+
+gameCounter++; // pre and post increament are different
+
+console.log(gameCounter);
