@@ -25,4 +25,33 @@ let myFunctions = function(){
     console.log("test");
 }
 
-console.log("myFunctions");
+// console.log("myFunctions");
+
+
+
+// ++++++++++++++++++ Memory Tyeps ++++++++++++++++++++++++++++++++++
+
+// Primitive Data types => Stack memory (it gives copy of original value)
+
+// Non-Primitive Data Types => Heap memory ( it gives original referance value of varialble)
+
+let myFirstName = "test"
+
+myNickName = myFirstName;
+
+myNickName = "test2";
+
+// console.log(myFirstName); // test
+// console.log(myNickName); // test2
+
+let userOne = {
+    name: "test",
+    rollNumber: 12
+}
+
+let userTwo = userOne
+
+userTwo.name = "testNew"
+
+// console.log(userTwo); // name: testNew
+// console.log(userOne); // name: testNew
