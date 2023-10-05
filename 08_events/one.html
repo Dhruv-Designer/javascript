@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events 1.0</title>
+</head>
+<body style="background-color: #414141; color: aliceblue;">
+    <h2>Amzing Imgs</h2>
+    <div id="images">
+        <ul>
+            <li id="1">
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quo accusantium harum possimus, ipsam
+                    exercitationem itaque quasi quae velit cum provident non facilis repellat iure sequi.</p>
+            </li>
+            <li id="2">
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quo accusantium harum possimus, ipsam
+                    exercitationem itaque quasi quae velit cum provident non facilis repellat iure sequi.</p>
+            </li>
+            <li id="3">
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quo accusantium harum possimus, ipsam
+                    exercitationem itaque quasi quae velit cum provident non facilis repellat iure sequi.</p>
+            </li>
+            <li id="4">
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quo accusantium harum possimus, ipsam
+                    exercitationem itaque quasi quae velit cum provident non facilis repellat iure sequi.</p>
+            </li>
+            <li id="5"><a href="https://google.com">click here</a></li>
+        </ul>
+    </div>
+
+    <script>
+        // document.getElementById('3').onclick = function () {
+        //     alert('three clicked')
+        // }
+
+        // attachEvent
+        //Jquery - on
+
+        // type, timestamp, preventDefault
+        //target, toElement, srcElement, currentTarget
+        // clientX, clientY, screenX, screeY, 
+        // altKey, ctrlKey, shiftKey, keyCode
+
+        // document.getElementById('images').addEventListener('click', function (e) {
+        //     console.log("u clicked on images");
+        // }, false)
+
+        // document.getElementById('3').addEventListener('click', function (e) {
+        //     console.log("u clicked on 3");
+        //     e.stopPropagation
+        // }, false)
+
+        // document.getElementById('3').addEventListener('click', function (e) {
+        //     console.log("u clicked on 3");
+        // }, true)
+
+        // document.getElementById('5').addEventListener('click', function (e) {
+        //     e.preventDefault()
+        //     e.stopPropagation()
+        //     console.log('google clicked');
+        // })
+
+        document.querySelector('#images').addEventListener('click', function (e) {
+            e.preventDefault()
+            e.stopPropagation()
+
+            if (e.target.tagName === 'P') {
+                console.log(e.target.tagName);
+                let removeIt = e.target.parentNode
+                removeIt.remove()
+            }
+
+
+
+            // removeIt.parentNode.removeChild(removeIt)
+        })
+
+
+
+        // Event bubbling == inside to outside which is default
+        // Event capturing == outside to inside which is true set
+    </script>
+</body>
+</html>
